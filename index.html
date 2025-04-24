@@ -29,10 +29,10 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;  /* Ensures the video fills the screen */
-      z-index: -1;  /* Keeps the video in the background */
+      width: 100vw; /* Full width of the viewport */
+      height: 100vh; /* Full height of the viewport */
+      object-fit: cover; /* Makes the video cover the screen */
+      z-index: -1; /* Keeps the video behind other elements */
     }
 
     #skip-btn {
@@ -72,7 +72,7 @@
     const goToDashy = () => {
       container.classList.add('fade-out');
       setTimeout(() => {
-        window.location.href = 'https://the-rebel-library.com'; // update path if needed
+        window.location.href = '/dashy'; // update path if needed
       }, 1000);
     };
 

@@ -9,10 +9,6 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       overflow: hidden;
       font-family: sans-serif;
     }
@@ -30,9 +26,13 @@
     }
 
     video {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: auto;
-      max-height: 100%;
+      height: 100%;
+      object-fit: cover;  /* Ensures the video fills the screen */
+      z-index: -1;  /* Keeps the video in the background */
     }
 
     #skip-btn {
@@ -47,6 +47,7 @@
       border-radius: 6px;
       cursor: pointer;
       transition: background 0.3s;
+      z-index: 10; /* Ensures the button is above the video */
     }
 
     #skip-btn:hover {
@@ -71,7 +72,7 @@
     const goToDashy = () => {
       container.classList.add('fade-out');
       setTimeout(() => {
-        window.location.href = 'https://the-rebel-library.com';
+        window.location.href = 'https://the-rebel-library.com'; // update path if needed
       }, 1000);
     };
 

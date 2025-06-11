@@ -64,7 +64,7 @@
     <button id="skip-btn">Skip Intro</button>
   </div>
 
-  <script>
+<script>
     const container = document.getElementById('container');
     const video = document.getElementById('intro');
     const skipBtn = document.getElementById('skip-btn');
@@ -72,10 +72,12 @@
     const goToDashy = () => {
       container.classList.add('fade-out');
       setTimeout(() => {
-        window.location.href = 'https://the-rebel-library.com'; // update path if needed
-      }, 1000);
+        // This is the corrected line:
+        window.location.href = 'https://dash.the-rebel-library.com';
+      }, 1000); // Fades for 1 second before redirecting
     };
 
+    // These triggers are perfect!
     video.addEventListener('ended', goToDashy);
     skipBtn.addEventListener('click', goToDashy);
   </script>

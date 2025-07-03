@@ -70,21 +70,22 @@
   </div>
 
 <script>
-    const container = document.getElementById('container');
-    const video = document.getElementById('intro');
-    const skipBtn = document.getElementById('skip-btn');
+  const container = document.getElementById('container');
+  const video = document.getElementById('intro');
+  const skipBtn = document.getElementById('skip-btn');
 
-    const goToHomarr = () => {
-      container.classList.add('fade-out');
-      setTimeout(() => {
-        // This is the corrected line:
-        window.location.href = 'https://homarr.the-rebel-library.com';
-      }, 1000); // Fades for 1 second before redirecting
-    };
+  const goToDesktop = () => {
+    container.classList.add('fade-out');
+    setTimeout(() => {
+      // This is the full URL to your Windows 98 page
+      window.location.href = 'https://thedemobro2.github.io/Windows98Desktop/';
+    }, 1000); // Fades for 1 second before redirecting
+  };
 
-    // These triggers are perfect!
-    video.addEventListener('ended', goToHomarr);
-    skipBtn.addEventListener('click', goToHomarr);
-  </script>
+  // Event listeners that trigger the redirect
+  video.addEventListener('ended', goToDesktop);
+  skipBtn.addEventListener('click', goToDesktop);
+</script>
+  
 </body>
 </html>
